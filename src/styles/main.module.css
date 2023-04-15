@@ -7,7 +7,7 @@
 }
 
 .red{
-    color:#f4b41a;
+    color:#14ffec;
 }
 
 .button1 {
@@ -20,8 +20,8 @@
 
 .button2 {
     font-family: 'Poppins', sans-serif;
-    background-color:#f4b41a;
-    border: 1px solid #f4b41a;
+    background-color:#14ffec;
+    border: 1px solid #14ffec;
     color: rgb(0, 0, 0);
     margin-left: 5px;
 }

@@ -32,9 +32,9 @@ export default function Home_Navbar() {
         <>
             <title>Artifract ♥</title>
             <link rel="icon" href="https://github.com/yaswanth-12/Artifract-frontend/favicon.ico"></link>
-            <div className={styles.nav}>
+            <div className={styles.hnav}>
                 <ul>
-                    <img src='/Artifract_Logo_White.png' ></img>
+                    <li> <img src='/Artifract_Logo.png' ></img> </li>
                     <img src='/search.png' className={styles.searchimage}></img>
                     <input
                         className={styles.searchBar}
@@ -42,9 +42,10 @@ export default function Home_Navbar() {
                         placeholder="Search"
                     />
 
-                    {/* <Link href="/profile"> */}
-                    <button className={styles.glow_btn} onClick={connectToWallet}>Connect wallet</button>
-                    {/* </Link> */}
+                    <Link href="/profile">
+                    <button className={styles.glow_btn} >Connect wallet</button>
+                    {/* <button className={styles.glow_btn} onClick={connectToWallet}>Connect wallet</button> */}
+                    </Link>
                 </ul>
             </div>
         </>

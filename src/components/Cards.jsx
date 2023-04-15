@@ -5,9 +5,9 @@ export default function Cards() {
     return (
         <>
             <div className={styles.alignment}>
-                {card("/1.png", "Branding", "Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's")}
-                {card("/2.png", "Development", "Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's")}
-                {card("/3.png", "Marketing", "Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's")}
+                {card("/1.png", "Branding", "===========================")}
+                {card("/2.png", "Development", "===========================")}
+                {card("/3.png", "Marketing", "===========================")}
             </div>
         </>
     )
