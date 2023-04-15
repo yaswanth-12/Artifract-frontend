@@ -4,6 +4,8 @@ import styles from '../styles/navbar.module.css'
 export default function Navbar() {
   return (
     <>
+    <title>Artifract ♥</title>
+    <link rel="icon" href="https://github.com/yaswanth-12/Artifract-frontend/favicon.ico"></link>
       <div className={styles.nav}>
         <ul>
           <img src='/favicon.ico' ></img>
