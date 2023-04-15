@@ -16,7 +16,7 @@ export default function Cards() {
 function card(imagesrc) {
     return (
         <div className={styles.card}>
-            <Image src={imagesrc} width="260" height="260"/> <br />
+            <Image src={imagesrc} width="260" height="260" /> <br />
         </div>
     )
 }

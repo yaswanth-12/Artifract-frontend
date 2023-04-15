@@ -7,7 +7,7 @@ import { ethers } from "ethers";
 
 export default function Home_Navbar() {
 
-    const [connectedAddress, setConnectedAddress] = useState(null);
+  const [connectedAddress, setConnectedAddress] = useState(null);
 
   const connectToWallet = async () => {
     if (window.ethereum) {
@@ -29,26 +29,26 @@ export default function Home_Navbar() {
   };
 
 
-    return (
-        <>
-            <title>Artifract ♥</title>
-            <link rel="icon" href="https://github.com/yaswanth-12/Artifract-frontend/favicon.ico"></link>
-            <div className={styles.hnav}>
-                <ul>
-                    <li> <img src='/Artifract_Logo.png' ></img> </li>
-                    <img src='/search.png' className={styles.searchimage}></img>
-                    <input
-                        className={styles.searchBar}
-                        type="text"
-                        placeholder="Search"
-                    />
+  return (
+    <>
+      <title>Artifract ♥</title>
+      <link rel="icon" href="https://github.com/yaswanth-12/Artifract-frontend/favicon.ico"></link>
+      <div className={styles.hnav}>
+        <ul>
+          <li> <img src='/Artifract_Logo.png' ></img> </li>
+          <img src='/search.png' className={styles.searchimage}></img>
+          <input
+            className={styles.searchBar}
+            type="text"
+            placeholder="Search"
+          />
 
-                    {/* <Link href="/profile"> */}
-                    {/* <button className={styles.glow_btn} >Connect wallet</button> */}
-                    <button className={styles.glow_btn} onClick={connectToWallet}>Connect wallet</button>
-                    {/* </Link> */}
-                </ul>
-            </div>
-        </>
-    )
+          {/* <Link href="/profile"> */}
+          {/* <button className={styles.glow_btn} >Connect wallet</button> */}
+          <button className={styles.glow_btn} onClick={connectToWallet}>Connect wallet</button>
+          {/* </Link> */}
+        </ul>
+      </div>
+    </>
+  )
 }

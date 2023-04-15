@@ -30,7 +30,7 @@
 }
 
 .container:hover .textOverlay {
-    font-family: "Montserrat",sans-serif;
+    font-family: "Montserrat", sans-serif;
     position: absolute;
     top: 80%;
     left: 50%;

@@ -9,21 +9,21 @@
     color: #ff9a00;
 }
 
-.red{
-    color:#14ffec;
+.red {
+    color: #14ffec;
 }
 
 .button1 {
     font-size: 16px;
-    font-family: "Montserrat",sans-serif;
+    font-family: "Montserrat", sans-serif;
     border: 1px solid #ff9a00;
-    color:#ffffff;
+    color: #ffffff;
     margin-right: 5px;
     background: transparent;
 }
 
-.main{
-    color:rgb(251, 251, 251);
+.main {
+    color: rgb(251, 251, 251);
     padding: 5cm;
     text-align: left;
 }
@@ -31,7 +31,7 @@
 .main span {
     background: transparent;
     font-size: 80px;
-    font-family: "Montserrat",sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 .main span b {
@@ -40,7 +40,7 @@
 
 .main p {
     background: transparent;
-    font-family: "Montserrat",sans-serif;
+    font-family: "Montserrat", sans-serif;
     word-spacing: 1.5px;
     font-size: 17px;
 }
