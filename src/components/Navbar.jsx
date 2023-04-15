@@ -17,7 +17,7 @@ export default function Landing_Navbar() {
           <a href="#" > <li> FAQ </li> </a>
           <a href="#" > <li> Contact </li> </a>
           <Link href="/home">
-            <button className={styles.glow_btn}>Connect wallet</button>
+            <button className={styles.glow_btn}>Launch App</button>
           </Link>
         </ul>
       </div>

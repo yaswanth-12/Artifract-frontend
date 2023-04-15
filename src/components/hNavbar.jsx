@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from '../styles/navbar.module.css'
-// import MyButton from './connectwallet'
 import Link from 'next/link';
 
 export default function Home_Navbar() {
@@ -17,7 +16,7 @@ export default function Home_Navbar() {
                         type="text"
                         placeholder="        Search"
                     />
-                    
+
                     <Link href="/profile">
                         <button className={styles.glow_btn}>Connect wallet</button>
                     </Link>
