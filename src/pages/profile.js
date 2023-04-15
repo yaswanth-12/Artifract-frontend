@@ -1,6 +1,6 @@
 // Profile page
 
-import Profile_Navbar from '../components/Navbar'
+import Profile_Navbar from '../components/pNavbar'
 import Main from '../components/Main'
 import Cards from '../components/Cards'
 import styles from '../styles/bg.module.css'

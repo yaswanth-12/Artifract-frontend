@@ -1,6 +1,6 @@
 // Home page
 
-import Home_Navbar from '../components/Navbar'
+import Home_Navbar from '../components/hNavbar'
 import Main from '../components/Main'
 import Cards from '../components/Cards'
 import styles from '../styles/bg.module.css'
