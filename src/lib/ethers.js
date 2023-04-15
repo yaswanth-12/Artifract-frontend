@@ -1,14 +1,14 @@
-import { ethers } from "ethers/providers";
+// import { ethers } from "ethers/providers";
 
-let signer = null;
+// let signer = null;
 
-let provider;
-if (window.ethereum == null) {
-    console.log("MetaMask not installed; using read-only defaults")
+// let provider;
+// if (window.ethereum == null) {
+//     console.log("MetaMask not installed; using read-only defaults")
 
-} else {
+// } else {
 
-    provider = new ethers.BrowserProvider(window.ethereum)
-    signer = await provider.getSigner();
-}
+//     provider = new ethers.BrowserProvider(window.ethereum)
+//     signer = await provider.getSigner();
+// }
 
