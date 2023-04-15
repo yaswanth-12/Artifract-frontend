@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+
+.container {
+    margin: 3cm 0 10cm 3cm;
+}
+
+.image {
+    display: block;
+    margin: 4cm 2cm 10cm 2cm;
+    width: 360px !important;
+    height: 360px !important;
+    border-radius: 6px;
+}

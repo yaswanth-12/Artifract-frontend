@@ -6,9 +6,9 @@ export default function Cards() {
     return (
         <>
             <div className={styles.alignment}>
-                {card("/1.avif", "#Karma")}
-                {card("/2.avif", "#BAYC")}
-                {card("/3.png", "Card 3 Title")}
+                {card("/1.avif", "#Karma Vault")}
+                {card("/2.avif", "#BAYC Vault")}
+                {card("/3.png", "#Azuki Vault")}
             </div>
         </>
     )
@@ -16,12 +16,15 @@ export default function Cards() {
 
 function card(imagesrc, title) {
     return (
-        <div className={styles.card}>
-            <div className={styles.container}>
-                <img src={imagesrc} className={styles.image}></img>
-                <div className={styles.textOverlay}>{title}</div>
-                <div className={styles.overlay}> </div>
+        <a href='/vault'>
+            <div className={styles.card}>
+                <div className={styles.container}>
+                    <img src={imagesrc} className={styles.image}></img>
+                    <div className={styles.textOverlay}>{title}</div>
+                    <div className={styles.overlay}> </div>
+                </div>
             </div>
-        </div>
+        </a>
+
     )
 }
