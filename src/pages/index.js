@@ -1,15 +1,18 @@
 import Navbar from '../components/Navbar'
 import Main from '../components/Main'
-import styles from '../styles/main.module.css'
 import Cards from '../components/Cards'
+// import Showblock from '../components/crypto'
 
 export default function Home() {
   return (
     <>
-        <Navbar />
-        <Main />
-        <Cards />
+      <Navbar />
+      <Main />
+      <Cards /> <br />
+      {/* <Showblock /> */}
+      {/* <CheckMetaMask /> */}
     </>
   )
 }
+
 
