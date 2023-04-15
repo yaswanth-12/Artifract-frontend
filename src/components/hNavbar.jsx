@@ -8,7 +8,7 @@ async function connectToWallet() {
     // Check for provider (MetaMask)
     if (window.ethereum) {
       // Use MetaMask provider
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const provider = new ethers.BrowserProvider(window.ethereum);
       // Request account access from user
       await window.ethereum.request({ method: 'eth_requestAccounts' });
       // Get signer
@@ -42,10 +42,10 @@ export default function Home_Navbar() {
                         placeholder="Search"
                     />
 
-                    <Link href="/profile">
-                    <button className={styles.glow_btn} >Connect wallet</button>
-                    {/* <button className={styles.glow_btn} onClick={connectToWallet}>Connect wallet</button> */}
-                    </Link>
+                    {/* <Link href="/profile"> */}
+                    {/* <button className={styles.glow_btn} >Connect wallet</button> */}
+                    <button className={styles.glow_btn} onClick={connectToWallet}>Connect wallet</button>
+                    {/* </Link> */}
                 </ul>
             </div>
         </>

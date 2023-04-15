@@ -5,20 +5,18 @@ export default function Cards() {
     return (
         <>
             <div className={styles.alignment}>
-                {card("/1.png", "Branding", "===========================")}
-                {card("/2.png", "Development", "===========================")}
-                {card("/3.png", "Marketing", "===========================")}
+                {card("/1.avif")}
+                {card("/2.avif")}
+                {card("/3.png")}
             </div>
         </>
     )
 }
 
-function card(image, head, data) {
+function card(imagesrc) {
     return (
         <div className={styles.card}>
-            <Image src={image} width="60" height="60" className={styles.logo_align}/> <br />
-            <h3>{head}</h3> <br />
-            <p>{data}</p>
+            <Image src={imagesrc} width="260" height="260"/> <br />
         </div>
     )
 }
