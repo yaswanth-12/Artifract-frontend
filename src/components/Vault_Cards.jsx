@@ -5,6 +5,10 @@ import Image from 'next/image'
 export default function Cards() {
     return (
         <>
+            <div className={styles.heading}>
+                <h3>BAYC Vault</h3>
+            </div>
+
             <div className={styles.align_center}>
                 <div className={styles.flip_container}>
                     <div className={styles.flipper}>
@@ -18,8 +22,8 @@ export default function Cards() {
                 <div className={styles.col1}>
                     <h3> Desposit </h3>
                     <p>
-                    Deposit your BAYC
-                    token into the vault.
+                        Deposit your BAYC
+                        token into the vault.
                     </p>
                 </div>
                 <div className={styles.col2}>
@@ -35,15 +39,15 @@ export default function Cards() {
             </div>
 
             <pre className={styles.white}>
-            -----------------------------------   Or   -----------------------------------
+                -----------------------------------   Or   -----------------------------------
             </pre>
 
             <div className={styles.container1}>
                 <div className={styles.col11}>
                     <h3> Initiate BuyOut </h3>
                     <p>
-                    Initiate a buyout on
-                    a Token ID.
+                        Initiate a buyout on
+                        a Token ID.
                     </p>
                 </div>
                 <div className={styles.col22}>
@@ -55,14 +59,14 @@ export default function Cards() {
             </div>
 
             <pre className={styles.white}>
-            -----------------------------------   Or   -----------------------------------
+                -----------------------------------   Or   -----------------------------------
             </pre>
 
             <div className={styles.container1}>
                 <div className={styles.col11}>
                     <h3> Bid on NFT </h3>
                     <p>
-                    Bid on a BAYC NFT.
+                        Bid on a BAYC NFT.
                     </p>
                 </div>
                 <div className={styles.col22}>
@@ -74,7 +78,7 @@ export default function Cards() {
             </div>
 
             <pre className={styles.white}>
-            -----------------------------------   Or   -----------------------------------
+                -----------------------------------   Or   -----------------------------------
             </pre>
 
             <div className={styles.container1}>
@@ -93,7 +97,7 @@ export default function Cards() {
             </div>
 
             <pre className={styles.white}>
-            -----------------------------------   Or   -----------------------------------
+                -----------------------------------   Or   -----------------------------------
             </pre>
 
             <div className={styles.container1}>
