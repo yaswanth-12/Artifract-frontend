@@ -17,10 +17,11 @@
 }
 
 .nav ul img {
-    width: 34px;
-    height: 34px;
+    /*width = 3.716 X=x height*/    
+    width: 149px;
+    height: 40px;
     transform: translate(20%, 35%);
-    margin-left: 3cm;
+    margin-left: 2cm;
 }
 
 /* .searchbar {
@@ -36,11 +37,11 @@
 } */
 
 .glow_btn {
-    background-color: #0d121c;
+    background-color: #f4b41a;
     border-radius: 6px;
-    color: #FFF;
+    color: #000000;
     border: none;
-    padding: 10px 20px;
+    padding: 8px 16px;
     font-size: 16px;
     font-weight: bold;
     position: relative;
@@ -63,10 +64,7 @@
 
 .glow_btn:hover {
     background-color: #0d0605;
-}
-
-.glow_btn:hover::before {
-    opacity: 0.4;
+    color:#f4b41a;
 }
 
 
