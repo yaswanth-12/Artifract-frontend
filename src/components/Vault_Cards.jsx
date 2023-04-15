@@ -9,7 +9,7 @@ export default function Cards() {
                 <div className={styles.flip_container}>
                     <div className={styles.flipper}>
                         <img src="https://yaswanth-12.github.io/Artifract-frontend/2.avif" alt="Image" className={styles.front} />
-                        <img src="/BAYC.png" alt="Image Flipped" className={styles.back} />
+                        <img src="https://yaswanth-12.github.io/Artifract-frontend/BAYC.png" alt="Image Flipped" className={styles.back} />
                     </div>
                 </div>
             </div>
