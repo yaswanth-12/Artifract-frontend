@@ -7,7 +7,7 @@ export default function Cards() {
             <div className={styles.alignment}>
                 {card("/1.avif")}
                 {card("/2.avif")}
-                {card("/3.png")}
+                {card("/3.avif")}
             </div>
         </>
     )
@@ -16,7 +16,7 @@ export default function Cards() {
 function card(imagesrc) {
     return (
         <div className={styles.card}>
-            <Image src={imagesrc} width="260" height="260"/> <br />
+            <img src={imagesrc} className={styles.image}></img>
         </div>
     )
 }

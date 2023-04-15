@@ -7,7 +7,7 @@ export default function Cards() {
             <div className={styles.alignment}>
                 {card("/1.avif")}
                 {card("/2.avif")}
-                {card("/3.png")}
+                {card("/3.avif")}
             </div>
         </>
     )
