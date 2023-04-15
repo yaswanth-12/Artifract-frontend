@@ -6,11 +6,12 @@
 }
 
 .container {
-    margin: 1cm 0 1cm 3cm;
+    font-family: "Montserrat", sans-serif;
+    margin: 1cm 0 1cm 6cm;
     display: inline-flex;
     border-radius: 10px;
-    width: 31cm;
-    height: 6cm;
+    width: 25cm;
+    height: 7cm;
     background: rgba(255, 255, 255, 0.45);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(5px);
@@ -18,11 +19,12 @@
 }
 
 .container1 {
-    margin: 1cm 0 1cm 3cm;
+    font-family: "Montserrat", sans-serif;
+    margin: 1cm 0 1cm 6cm;
     display: inline-flex;
     border-radius: 10px;
-    width: 31cm;
-    height: 3cm;
+    width: 25cm;
+    height: 3.5cm;
     background: rgba(255, 255, 255, 0.45);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(5px);
@@ -68,29 +70,75 @@
 }
 
 .col1 h3 {
-    margin-top: 2cm ;
+    margin-top: 2cm;
+    text-align: center;
+}
+
+.col2 h3 {
+    margin-top: 2cm;
     width: 4cm;
     height: 6cm;
     text-align: center;
 }
 
-.col11 {
-    margin-top: 1cm ;
-    width: 5cm;
-    height: 2cm;
+.col1 {
+    margin-left: 1.5cm;
+    width: 2cm;
+    height: 6cm;
+}
+
+.col11 h3 {
+    margin-top: 1cm;
     text-align: center;
 }
 
+.col11 {
+    margin-top: 10px;
+    width: 6cm;
+    height: 2cm;
+}
+
 .col2 {
-    padding-top: 20px;
-    margin-left: 2cm;
+    padding-top: 27px;
+    margin-left: 4cm;
     width: 10cm;
-    height: 4cm;
+    height: 6cm;
 }
 
 .col22 {
     padding-top: 20px;
-    margin-left: 2cm;
+    margin-left: 1.45cm;
     width: 10cm;
     height: 2cm;
+}
+
+.inputbox {
+    padding: 0.6rem;
+    margin: 8px 0 8px 0;
+    border: 1px solid #ccc;
+    background-color: #909090;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    width: 15cm;
+}
+
+.inputbox::placeholder{
+    color: rgb(255, 255, 255);
+}
+.submitButton {
+    margin-top: 8px;
+    background-color: #ff9a00;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.submitButton:hover {
+    background-color: #3e8e41;
 }

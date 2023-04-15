@@ -21,10 +21,10 @@ export default function Cards() {
                 <div className={styles.col2}>
                     <div className={styles.deposit}>
                         <form>
-                            <input type="text" placeholder="tokenID" className={styles.inputbox} ></input> <br />
-                            <input type="text" placeholder="No of fractions" className={styles.inputbox} ></input> <br />
-                            <input type="text" placeholder="minimum buyout wait time" className={styles.inputbox} ></input> <br />
+                            <input type="text" placeholder="Token ID" className={styles.inputbox}></input>
+                            <input type="text" placeholder="No of fractions" className={styles.inputbox} ></input>
                             <input type="text" placeholder="minimum price" className={styles.inputbox} ></input>
+                            <button className={styles.submitButton}>Submit</button>
                         </form>
                     </div>
                 </div>
@@ -36,7 +36,8 @@ export default function Cards() {
                 </div>
                 <div className={styles.col22}>
                     <div className={styles.initiate_buyout}>
-                        <input type="text" placeholder="tokenID" className={styles.inputbox} ></input>
+                        <input type="text" placeholder="TokenID" className={styles.inputbox} ></input>
+                        <button className={styles.submitButton}>Submit</button>
                     </div>
                 </div>
             </div>
@@ -48,6 +49,7 @@ export default function Cards() {
                 <div className={styles.col22}>
                     <div className={styles.end_bid}>
                         <input type="text" placeholder="tokenID" className={styles.inputbox} ></input>
+                        <button className={styles.submitButton}>Submit</button>
                     </div>
                 </div>
             </div>
@@ -59,6 +61,7 @@ export default function Cards() {
                 <div className={styles.col22}>
                     <div className={styles.bid_onNFT}>
                         <input type="text" placeholder="tokenID" className={styles.inputbox} ></input>
+                        <button className={styles.submitButton}>Submit</button>
                     </div>
                 </div>
             </div>
@@ -70,6 +73,7 @@ export default function Cards() {
                 <div className={styles.col22}>
                     <div className={styles.withdraw}>
                         <input type="text" placeholder="tokenID" className={styles.inputbox} ></input>
+                        <button className={styles.submitButton}>Submit</button>
                     </div>
                 </div>
             </div>
