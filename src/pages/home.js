@@ -1,8 +1,8 @@
 // Home page
 
 import Home_Navbar from '../components/hNavbar'
-import Main from '../components/Main'
-import Cards from '../components/Cards'
+import Main from '../components/home_Main'
+import Cards from '../components/home_Cards'
 import styles from '../styles/bg.module.css'
 // landing Page
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../styles/cards.module.css'
+import styles from '../styles/profile_cards.module.css'
 import Image from 'next/image'
 export default function Cards() {
     return (
@@ -20,4 +20,3 @@ function card(imagesrc) {
         </div>
     )
 }
-

@@ -1,6 +1,6 @@
 import Landing_Navbar from '../components/Navbar'
-import Main from '../components/Main'
-import Cards from '../components/Cards'
+import Main from '../components/lapp_Main'
+import Cards from '../components/lapp_Cards'
 import styles from '../styles/bg.module.css'
 // landing Page
 
