@@ -40,13 +40,13 @@ export default function Home_Navbar() {
   return (
     <>
       <title>Artifract ♥</title>
-      <link rel="icon" href="https://github.com/yaswanth-12/Artifract-frontend/favicon.ico" />
+      <link rel="icon" href="https://yaswanth-12.github.io/Artifract-frontend/favicon.ico" />
       <div className={styles.hnav}>
         <ul>
           <li>
-            <img src="https://github.com/yaswanth-12/Artifract-frontend/Artifract_Logo.png" />
+            <img src="https://yaswanth-12.github.io/Artifract-frontend/Artifract_Logo.png" />
           </li>
-          <img src="https://github.com/yaswanth-12/Artifract-frontend/search.png" className={styles.searchimage} />
+          <img src="https://yaswanth-12.github.io/Artifract-frontend/search.png" className={styles.searchimage} />
           <input className={styles.searchBar} type="text" placeholder="Search" />
 
           <WalletConnect />
