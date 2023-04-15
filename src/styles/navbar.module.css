@@ -1,28 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
 .red li {
     color: #14ffec;
-    margin-left: 11cm;
+    margin-left: 9cm;
 }
 
 .nav ul li {
-    font-size: 17px;
+    font-size: 16px;
     padding: 0 13px 0 13px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Montserrat",sans-serif;
     display: inline-block;
     margin-top: 40px;
 }
 
 .hnav ul li {
-    font-size: 17px;
+    font-size: 16px;
     padding: 0 13px 0 13px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Montserrat",sans-serif;
     display: inline-block;
     margin-top: 15.5px;
 }
 
 .pnav ul li {
-    font-size: 17px;
+    font-size: 16px;
     padding: 0 13px 0 13px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Montserrat",sans-serif;
     display: inline-block;
     margin-top: 15.5px;
 }
@@ -62,17 +64,18 @@
 
 
 .glow_btn {
+    font-family: "Montserrat",sans-serif;
     background-color: #14ffec;
-    border-radius: 6px;
+    border-radius: 60px;
     color: #000000;
     border: none;
-    padding: 8px 16px;
-    font-size: 16px;
+    padding: 10px 20px;
+    font-size: 15px;
     font-weight: bold;
     position: relative;
     overflow: hidden;
     transition: background-color 0.3s ease-out;
-    margin-left: 0.5cm;
+    margin-left: 7cm;
 }
 
 .glow_btn::before {
