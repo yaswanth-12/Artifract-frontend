@@ -8,9 +8,11 @@
     font-family: 'Poppins', sans-serif;
     display: inline-block;
     margin-top: 23px;
-    text-decoration: none !important;
 }
 
+.nav ul a {
+    text-decoration: none !important;
+} 
 .nav ul img {
     width: 34px;
     height: 34px;
