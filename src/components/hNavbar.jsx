@@ -1,54 +1,57 @@
-import React from 'react'
-import styles from '../styles/navbar.module.css'
-import Link from 'next/link';
-import { useState } from "react";
-import { ethers } from "ethers";
+import React, { useState } from 'react';
+import styles from '../styles/navbar.module.css';
+import { ethers } from 'ethers';
 
-
-export default function Home_Navbar() {
-
-  const [connectedAddress, setConnectedAddress] = useState(null);
-
-  const connectToWallet = async () => {
-    if (window.ethereum) {
-      // use BrowserProvider to connect to wallet
-      const provider = new ethers.BrowserProvider(window.ethereum);
+function WalletConnect() {
+  const [walletAddress, setWalletAddress] = useState(null);
+  // console.log("checking.......");
+  async function connectWallet() {
+    // console.log("checking.......");
+    if (typeof window.ethereum !== 'undefined') {
+      // console.log("checking.......");
       try {
-        // request access to the user's wallet
-        await window.ethereum.request({ method: 'eth_requestAccounts' });
-        const signer = provider.getSigner();
-        // get the connected wallet's address
-        const address = await signer.getAddress();
-        setConnectedAddress(address);
-      } catch (error) {
-        console.error(error);
+        console.log("checking.......");
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        // console.log("checking.......");
+        setWalletAddress(accounts[0]);
+      } catch (err) {
+        // console.log("checking.......");
+        console.error(err);
       }
-    } else {
-      console.log('Metamask not installed.');
-    }
-  };
 
+      // console.log("checking.......");
+    }
+  }
 
   return (
     <>
+      {walletAddress ? (
+        <div>{walletAddress}</div>
+      ) : (
+        <button onClick={connectWallet} className={styles.glow_btn}>
+          Connect wallet
+        </button>
+      )}
+    </>
+  );
+}
+
+export default function Home_Navbar() {
+  return (
+    <>
       <title>Artifract ♥</title>
-      <link rel="icon" href="https://github.com/yaswanth-12/Artifract-frontend/favicon.ico"></link>
+      <link rel="icon" href="https://github.com/yaswanth-12/Artifract-frontend/favicon.ico" />
       <div className={styles.hnav}>
         <ul>
-          <li> <img src='/Artifract_Logo.png' ></img> </li>
-          <img src='/search.png' className={styles.searchimage}></img>
-          <input
-            className={styles.searchBar}
-            type="text"
-            placeholder="Search"
-          />
+          <li>
+            <img src="/Artifract_Logo.png" />
+          </li>
+          <img src="/search.png" className={styles.searchimage} />
+          <input className={styles.searchBar} type="text" placeholder="Search" />
 
-          {/* <Link href="/profile"> */}
-          {/* <button className={styles.glow_btn} >Connect wallet</button> */}
-          <button className={styles.glow_btn} onClick={connectToWallet}>Connect wallet</button>
-          {/* </Link> */}
+          <WalletConnect />
         </ul>
       </div>
     </>
-  )
+  );
 }
