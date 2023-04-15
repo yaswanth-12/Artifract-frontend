@@ -1,9 +1,14 @@
-import { JsonRpcProvider } from "ethers/providers";
-// import { Web3Provider } from "ethers/providers";
+import { ethers } from "ethers/providers";
 
+let signer = null;
 
-// const Alchemy_ID = 'ojOt7FUxsbOPl3kZHMdvUhPind371lgo'
-const provider = new JsonRpcProvider(`https://eth-mainnet.g.alchemy.com/v2/ojOt7FUxsbOPl3kZHMdvUhPind371lgo`)
+let provider;
+if (window.ethereum == null) {
+    console.log("MetaMask not installed; using read-only defaults")
 
-export default provider;
+} else {
+
+    provider = new ethers.BrowserProvider(window.ethereum)
+    signer = await provider.getSigner();
+}
 

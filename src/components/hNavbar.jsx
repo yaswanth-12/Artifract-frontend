@@ -1,6 +1,26 @@
 import React from 'react'
 import styles from '../styles/navbar.module.css'
 import Link from 'next/link';
+// import { JsonRpcProvider } from "ethers/providers";
+import { ethers } from "ethers";
+
+async function walletconnect() {
+
+let signer = null;
+
+let provider;
+if (window.ethereum == null) {
+
+    console.log("MetaMask not installed; using read-only defaults")
+    provider = ethers.getDefaultProvider()
+
+} else {
+
+    provider = new ethers.BrowserProvider(window.ethereum)
+    signer = await provider.getSigner();
+}
+}
+
 
 export default function Home_Navbar() {
     return (
@@ -17,9 +37,9 @@ export default function Home_Navbar() {
                         placeholder="        Search"
                     />
 
-                    <Link href="/profile">
-                        <button className={styles.glow_btn}>Connect wallet</button>
-                    </Link>
+                    {/* <Link href="/profile"> */}
+                        <button className={styles.glow_btn} onClick={walletconnect}>Connect wallet</button>
+                    {/* </Link> */}
                 </ul>
             </div>
         </>
