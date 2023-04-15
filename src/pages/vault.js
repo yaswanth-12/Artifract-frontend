@@ -4,7 +4,7 @@ import Home_Navbar from '../components/hNavbar'
 import Main from '../components/home_Main'
 import Cards from '../components/Vault_Cards'
 import styles from '../styles/bg.module.css'
-// landing Page
+// Landing Page
 
 export default function homepage() {
   return (
