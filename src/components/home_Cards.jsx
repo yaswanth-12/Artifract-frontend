@@ -1,6 +1,7 @@
-import React from 'react'
-import styles from '../styles/home_cards.module.css'
-import Image from 'next/image'
+import React from 'react';
+import styles from '../styles/home_cards.module.css';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Cards() {
     return (
@@ -8,7 +9,7 @@ export default function Cards() {
             <div className={styles.alignment}>
                 {card("/1.avif", "#Karma Vault")}
                 {card("/2.avif", "#BAYC Vault")}
-                {card("/3.png", "#Azuki Vault")}
+                {card("/3.avif", "#Azuki Vault")}
             </div>
         </>
     )
@@ -16,7 +17,7 @@ export default function Cards() {
 
 function card(imagesrc, title) {
     return (
-        <a href='/vault'>
+        <Link href="/vault">
             <div className={styles.card}>
                 <div className={styles.container}>
                     <img src={imagesrc} className={styles.image}></img>
@@ -24,7 +25,7 @@ function card(imagesrc, title) {
                     <div className={styles.overlay}> </div>
                 </div>
             </div>
-        </a>
+        </Link>
 
     )
 }
