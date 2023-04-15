@@ -1,0 +1,21 @@
+.red{
+    color:#f24259;
+}
+
+.nav li {
+    font-size: 15px;
+    font-weight: 600;
+    padding : 0 13px 0 13px;
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    margin-top: 23px;
+}
+
+.nav li img {
+    width: 34px;
+    height: 34px;
+    transform: translate(20%, 35%);
+    margin-right: 18cm;
+    margin-left: 1.5cm;
+}
+
