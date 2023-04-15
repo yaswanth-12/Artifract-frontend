@@ -16,7 +16,7 @@ export default function Cards() {
 
             <div className={styles.container}>
                 <div className={styles.col1}>
-                    <h3> Desposit: </h3>
+                    <h3> Desposit </h3>
                     <p>
                     Deposit your BAYC
                     token into the vault.
@@ -34,9 +34,17 @@ export default function Cards() {
                 </div>
             </div>
 
+            <pre className={styles.white}>
+            -----------------------------------   Or   -----------------------------------
+            </pre>
+
             <div className={styles.container1}>
                 <div className={styles.col11}>
                     <h3> Initiate BuyOut </h3>
+                    <p>
+                    Initiate a buyout on
+                    a Token ID.
+                    </p>
                 </div>
                 <div className={styles.col22}>
                     <div className={styles.initiate_buyout}>
@@ -46,9 +54,16 @@ export default function Cards() {
                 </div>
             </div>
 
+            <pre className={styles.white}>
+            -----------------------------------   Or   -----------------------------------
+            </pre>
+
             <div className={styles.container1}>
                 <div className={styles.col11}>
                     <h3> Bid on NFT </h3>
+                    <p>
+                    Bid on a BAYC NFT.
+                    </p>
                 </div>
                 <div className={styles.col22}>
                     <div className={styles.end_bid}>
@@ -58,9 +73,16 @@ export default function Cards() {
                 </div>
             </div>
 
+            <pre className={styles.white}>
+            -----------------------------------   Or   -----------------------------------
+            </pre>
+
             <div className={styles.container1}>
                 <div className={styles.col11}>
                     <h3> End Bid  </h3>
+                    <p>
+                        End BAYC token bid.
+                    </p>
                 </div>
                 <div className={styles.col22}>
                     <div className={styles.bid_onNFT}>
@@ -70,9 +92,16 @@ export default function Cards() {
                 </div>
             </div>
 
+            <pre className={styles.white}>
+            -----------------------------------   Or   -----------------------------------
+            </pre>
+
             <div className={styles.container1}>
                 <div className={styles.col11}>
                     <h3> Withdraw </h3>
+                    <p>
+                        Withdraw BAYC token.
+                    </p>
                 </div>
                 <div className={styles.col22}>
                     <div className={styles.withdraw}>
