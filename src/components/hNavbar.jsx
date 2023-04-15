@@ -44,9 +44,9 @@ export default function Home_Navbar() {
       <div className={styles.hnav}>
         <ul>
           <li>
-            <img src="/Artifract_Logo.png" />
+            <img src="https://github.com/yaswanth-12/Artifract-frontend/Artifract_Logo.png" />
           </li>
-          <img src="/search.png" className={styles.searchimage} />
+          <img src="https://github.com/yaswanth-12/Artifract-frontend/search.png" className={styles.searchimage} />
           <input className={styles.searchBar} type="text" placeholder="Search" />
 
           <WalletConnect />
