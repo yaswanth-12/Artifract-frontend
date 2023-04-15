@@ -1,23 +1,97 @@
-.red{
-    color:#f24259;
+.red li {
+    color: #f4b41a;
+    margin-left: 11cm;
 }
 
 .nav ul li {
-    font-size: 16px;
-    padding : 0 13px 0 13px;
+    font-size: 17px;
+    padding: 0 13px 0 13px;
     font-family: 'Poppins', sans-serif;
     display: inline-block;
     margin-top: 23px;
 }
 
 .nav ul a {
+    color: rgb(255, 255, 255);
     text-decoration: none !important;
-} 
+}
+
 .nav ul img {
     width: 34px;
     height: 34px;
     transform: translate(20%, 35%);
-    margin-right: 18cm;
-    margin-left: 1.5cm;
+    margin-left: 3cm;
 }
 
+/* .searchbar {
+    line-height: 26px;
+    width: 15cm;
+    padding: 8px;
+    border-radius: 6px;
+    color: rgb(0, 0, 0);
+    border: none;
+    background-color: transparent;
+    caret-color: rgb(179, 20, 20);
+    caret-width: 3px;
+} */
+
+.glow_btn {
+    background-color: #0d121c;
+    border-radius: 6px;
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease-out;
+    margin-left: 0.5cm;
+}
+
+.glow_btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0d121c;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.glow_btn:hover {
+    background-color: #0d0605;
+}
+
+.glow_btn:hover::before {
+    opacity: 0.4;
+}
+
+
+.searchBar {
+    background-color: rgba(212, 209, 209, 0.5);
+    border:none;
+    border-radius: 5px;
+    height: 35px;
+    padding: 5px 10px;
+    width: 15cm;
+    transition: background-color 0.3s ease-in-out;
+    font-size: 15px;
+    margin-left: -0.7cm;
+}
+
+.searchBar:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+}
+
+
+.searchimage {
+    margin-left: 6cm !important;
+    color: #000000;
+    height: 22px !important;
+    width: 22px !important;
+    transform: translate(20%,28%) !important;
+}
