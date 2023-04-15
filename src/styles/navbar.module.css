@@ -69,12 +69,13 @@
 
 
 .searchBar {
-    background-color: rgba(212, 209, 209, 0.5);
+    background-color: rgba(227, 224, 224, 0.5);
+    color:aliceblue;
     border:none;
     border-radius: 5px;
     height: 35px;
-    padding: 5px 10px;
-    width: 15cm;
+    padding: 5px 10px 5px 40px;
+    width: 13cm;
     transition: background-color 0.3s ease-in-out;
     font-size: 15px;
     margin-left: -0.7cm;

@@ -1,23 +1,30 @@
 import React from 'react'
 import styles from '../styles/navbar.module.css'
 import Link from 'next/link';
-import { ethers } from "ethers";
+import { ethers } from 'ethers';
 
-async function walletconnect() {
-
-    let signer = null;
-    let provider;
-    if (window.ethereum == null) {
-
-        console.log("MetaMask not installed; using read-only defaults")
-        provider = ethers.getDefaultProvider()
-
+async function connectToWallet() {
+  try {
+    // Check for provider (MetaMask)
+    if (window.ethereum) {
+      // Use MetaMask provider
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      // Request account access from user
+      await window.ethereum.request({ method: 'eth_requestAccounts' });
+      // Get signer
+      const signer = provider.getSigner();
+      // Get accounts
+      const accounts = await provider.listAccounts();
+      // Log accounts
+      console.log(accounts);
     } else {
-
-        provider = new ethers.BrowserProvider(window.ethereum)
-        signer = await provider.getSigner();
+      console.log('No web3 provider detected');
     }
+  } catch (err) {
+    console.error(err);
+  }
 }
+
 
 
 export default function Home_Navbar() {
@@ -32,11 +39,11 @@ export default function Home_Navbar() {
                     <input
                         className={styles.searchBar}
                         type="text"
-                        placeholder="        Search"
+                        placeholder="Search"
                     />
 
                     {/* <Link href="/profile"> */}
-                    <button className={styles.glow_btn} onClick={walletconnect}>Connect wallet</button>
+                    <button className={styles.glow_btn} onClick={connectToWallet}>Connect wallet</button>
                     {/* </Link> */}
                 </ul>
             </div>
