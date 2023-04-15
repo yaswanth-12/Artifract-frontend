@@ -4,10 +4,9 @@ export default function Main() {
     return (
         <>
             <div className={styles.main}>
-                <span>THE WAY OF </span> <span className={styles.red}>DREAM</span>
+                <span>  <span className={styles.orange}> <b>ArtiFract</b></span> Protocol </span>
                 <p>A single place to share, curate and discover visual that tells a story.</p> <br />
-                <button className={styles.button1}>LEARN MORE</button>
-                <button className={styles.button2}>GET STARTED</button>
+                <button className={styles.button1}>Learn more</button>
             </div>
 
         </>

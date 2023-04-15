@@ -6,6 +6,7 @@
 }
 
 .nav ul li {
+    background: transparent;
     font-size: 16px;
     padding: 0 13px 0 13px;
     font-family: "Montserrat",sans-serif;
@@ -14,6 +15,7 @@
 }
 
 .hnav ul li {
+    background: transparent;
     font-size: 16px;
     padding: 0 13px 0 13px;
     font-family: "Montserrat",sans-serif;
@@ -22,6 +24,7 @@
 }
 
 .pnav ul li {
+    background: transparent;
     font-size: 16px;
     padding: 0 13px 0 13px;
     font-family: "Montserrat",sans-serif;
@@ -30,14 +33,17 @@
 }
 
 .nav ul a {
+    background: transparent;
     color: rgb(255, 255, 255);
     text-decoration: none !important;
 }
 
 .nav ul a:hover {
+    background: transparent;
     color: #ff9a00;
 }
 .nav ul img {
+    background: transparent;
     /*width = 3.716 X=x height*/    
     width: 149px;
     height: 40px;
@@ -46,6 +52,7 @@
 }
 
 .pnav ul img {
+    background: transparent;
     /*width = 3.716 X=x height*/    
     width: 149px;
     height: 40px;
@@ -54,6 +61,7 @@
 }
 
 .hnav ul img {
+    background: transparent;
     /*width = 3.716 X=x height*/    
     width: 149px;
     height: 40px;
@@ -64,6 +72,7 @@
 
 
 .glow_btn {
+    background: transparent;
     font-family: "Montserrat",sans-serif;
     background-color: #14ffec;
     border-radius: 60px;
@@ -98,6 +107,7 @@
 
 
 .searchBar {
+    background: transparent;
     background-color: rgba(227, 224, 224, 0.5);
     color:rgb(219, 240, 244);
     border:none;

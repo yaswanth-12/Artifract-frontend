@@ -1,9 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Nova+Oval&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
 
 .main button {
     border-radius: 5px;
     padding: 8px 11px 8px 11px;
+}
+
+.orange {
+    color: #ff9a00;
 }
 
 .red{
@@ -11,19 +14,12 @@
 }
 
 .button1 {
-    font-family: 'Poppins', sans-serif;
-    border: 1px solid rgb(255, 255, 255);
-    color:rgb(250, 250, 250);
+    font-size: 16px;
+    font-family: "Montserrat",sans-serif;
+    border: 1px solid #ff9a00;
+    color:#ffffff;
     margin-right: 5px;
     background: transparent;
-}
-
-.button2 {
-    font-family: 'Poppins', sans-serif;
-    background-color:#14ffec;
-    border: 1px solid #14ffec;
-    color: rgb(0, 0, 0);
-    margin-left: 5px;
 }
 
 .main{
@@ -32,19 +28,19 @@
     text-align: left;
 }
 
-.main h3 {
-    font-family: 'Nova Oval', cursive;
-    font-size: 40px;
+.main span {
+    background: transparent;
+    font-size: 80px;
+    font-family: "Montserrat",sans-serif;
 }
 
-.main span {
-    font-size: 70px;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
+.main span b {
+    background: transparent;
 }
 
 .main p {
-    font-family: 'Poppins', sans-serif;
+    background: transparent;
+    font-family: "Montserrat",sans-serif;
     word-spacing: 1.5px;
     font-size: 17px;
 }
