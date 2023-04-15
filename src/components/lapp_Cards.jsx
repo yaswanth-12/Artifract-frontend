@@ -5,9 +5,9 @@ export default function Cards() {
     return (
         <>
             <div className={styles.alignment}>
-                {card("/1.avif")}
-                {card("/2.avif")}
-                {card("/3.avif")}
+                {card("https://yaswanth-12.github.io/Artifract-frontend/1.avif")}
+                {card("https://yaswanth-12.github.io/Artifract-frontend/2.avif")}
+                {card("https://yaswanth-12.github.io/Artifract-frontend/3.avif")}
             </div>
         </>
     )
