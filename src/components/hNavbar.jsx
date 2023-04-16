@@ -25,7 +25,7 @@ function WalletConnect() {
         method: "eth_requestAccounts",
       });
       account = accounts[0];
-      connectButton.current.innerHTML =
+      connectButton.current.innerHTML = "Address: " +
         account[0] +
         account[1] +
         account[2] +

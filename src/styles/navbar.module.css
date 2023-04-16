@@ -85,7 +85,7 @@
     position: relative;
     overflow: hidden;
     transition: background-color 0.3s ease-out;
-    margin-left: 7cm;
+    margin-left: 5cm;
 }
 
 .glow_btn::before {

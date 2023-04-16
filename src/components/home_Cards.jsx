@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from '../styles/home_cards.module.css';
-import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Cards() {
