@@ -10,7 +10,7 @@ export default function Landing_Navbar() {
       <div className={styles.nav}>
         <ul>
           <img src='https://yaswanth-12.github.io/Artifract-frontend/Artifract_Logo.png' ></img>
-          <a href="#" className={styles.red}> <li> Home </li> </a>
+          <a href="#" className={styles.blue}> <li> Home </li> </a>
           <a href="#" > <li> Ecosystem </li> </a>
           <a href="#" > <li> Contact </li> </a>
           <Link href="/home">
