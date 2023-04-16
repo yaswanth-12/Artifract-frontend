@@ -9,7 +9,7 @@ import styles from '../styles/bg.module.css'
 export default function homepage() {
   return (
     <>
-      <Link rel="icon" type="image/x-icon" href="https://yaswanth-12.github.io/Artifract-frontend/Artifract_Fevicon.png"></Link>
+      <Link rel="icon" type="image/x-icon" href="https://yaswanth-12.github.io/Artifract-frontend/public/Artifract_Fevicon.png"></Link>
       <div className={styles.body}></div>
       <div className={styles.body}>
         <Home_Navbar />
