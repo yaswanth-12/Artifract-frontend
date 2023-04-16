@@ -2,20 +2,24 @@ import React from 'react'
 import styles from '../styles/vault_cards.module.css'
 import { Contract } from 'ethers';
 import { VAULT_ADDRESS, VAULT_ABI } from '../../constants/index'
-import signer from './hNavbar';
+import { signer } from './hNavbar';
+import { parseEther } from 'ethers/utils';
 
 let tokenID;
 let no_of_fragments;
 let minimum_price;
 
-let contract = new Contract(VAULT_ADDRESS, VAULT_ABI, signer)
+async function deposit(e) {
 
-function deposit(e) {
     e.preventDefault();
     tokenID = document.getElementById('tokenID');
     no_of_fragments = document.getElementById('fract');
     minimum_price = document.getElementById('price');
-    // console.log(tokenID.value);
+    // console.log(signer)
+    let contract = new Contract(VAULT_ADDRESS,VAULT_ABI,signer);
+
+    let tx = await (contract.deposit(tokenID.value, no_of_fragments.value, parseEther(`${minimum_price.value}`)))
+    console.log(tx);
 }
 
 function buyout(e) {
@@ -33,9 +37,16 @@ function endBid(e) {
     tokenID = document.getElementById('tokenID');
 }
 
-function withdraw(e) {
+async function withdraw(e) {
+    console.log(signer);
     e.preventDefault();
     tokenID = document.getElementById('tokenID');
+
+    let contract = new Contract(VAULT_ADDRESS,VAULT_ABI,signer);
+    
+    let tx = await (contract.withdraw(tokenID.value));
+    console.log(tx);
+
 }
 
 

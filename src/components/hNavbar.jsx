@@ -43,6 +43,7 @@ function WalletConnect() {
         const provider = new BrowserProvider(ethereum);
         await provider.send("eth_requestAccounts", []);
         signer = await provider.getSigner();
+        // console.log(signer)
         // const tx = await signer.sendTransaction({
         //   from: await signer.getAddress(),
         //   to: "0x92bA38bBB2B0f307b031Df22475578123c73E1F6",
@@ -57,6 +58,7 @@ function WalletConnect() {
     <button ref={connectButton} className={styles.glow_btn}> Connect wallet </button>
   );
 }
+
 
 export default function Home_Navbar() {
   return (
@@ -77,4 +79,3 @@ export default function Home_Navbar() {
     </>
   );
 }
-
