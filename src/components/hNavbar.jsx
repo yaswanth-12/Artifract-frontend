@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import styles from '../styles/navbar.module.css';
 import { ethers } from "ethers";
+import { parseEther } from "ethers/utils";
 
 let account;
 
@@ -36,11 +37,18 @@ function WalletConnect() {
         account[39] +
         account[40] +
         account[41];
-        if (typeof window.ethereum !== "undefined") {
-          const provider = new ethers.BrowserProvider(ethereum);
-          await provider.send("eth_requestAccounts", []);
-          const signer = provider.getSigner()
-        };
+      if (typeof window.ethereum !== "undefined") {
+        const provider = new ethers.BrowserProvider(ethereum);
+        await provider.send("eth_requestAccounts", []);
+        const signer = provider.getSigner();
+
+        // console.log(await signer);
+        const tx = await signer.sendTransaction({
+          to: "0x0",
+          value: parseEther("0.001")
+        });
+      };
+
     }
   }, [connectButton]);
 
