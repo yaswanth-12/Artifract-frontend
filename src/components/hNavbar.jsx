@@ -1,38 +1,52 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from '../styles/navbar.module.css';
-import { ethers } from 'ethers';
+import  ethers from "ethers";
+
+let account;
 
 function WalletConnect() {
-  const [walletAddress, setWalletAddress] = useState(null);
-  // console.log("checking.......");
-  async function connectWallet() {
-    // console.log("checking.......");
-    if (typeof window.ethereum !== 'undefined') {
-      // console.log("checking.......");
-      try {
-        console.log("checking.......");
-        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-        // console.log("checking.......");
-        setWalletAddress(accounts[0]);
-      } catch (err) {
-        // console.log("checking.......");
-        console.error(err);
-      }
+  const connectButton = useRef(null);
 
-      // console.log("checking.......");
+  useEffect(() => {
+    // Web3 Browswer Detection
+    if (typeof window.ethereum !== "undefined") {
+      console.log("Injected Web3 Wallet is installed!");
     }
-  }
+    console.log("checking...");
+
+    //Click Event
+    connectButton.current.addEventListener("click", () => {
+      connectAccount();
+    });
+
+    //Connect Account Function
+    async function connectAccount() {
+      const accounts = await ethereum.request({
+        method: "eth_requestAccounts",
+      });
+      account = accounts[0];
+      connectButton.current.innerHTML =
+        account[0] +
+        account[1] +
+        account[2] +
+        account[3] +
+        account[4] +
+        account[5] +
+        "..." +
+        account[38] +
+        account[39] +
+        account[40] +
+        account[41];
+        // const provider = new ethers.providers.Web3Provider(window.ethereum);
+        if (typeof window.ethereum !== "undefined") {
+          // console.log(ethers.providers.Web3Provider);
+          const provider = new ethers.providers.Web3Provider(window.ethereum)
+        };
+    }
+  }, [connectButton]);
 
   return (
-    <>
-      {walletAddress ? (
-        <div>{walletAddress}</div>
-      ) : (
-        <button onClick={connectWallet} className={styles.glow_btn}>
-          Connect wallet
-        </button>
-      )}
-    </>
+    <button ref={connectButton} className={styles.glow_btn}> Connect wallet </button>
   );
 }
 

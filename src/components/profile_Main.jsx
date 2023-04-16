@@ -64,7 +64,7 @@ export default function Main() {
             </div>
 
             <div className={styles.eligibile_NFTs}>
-
+                    <h3>Eligibile NFTs</h3>
             </div>
 
         </>
