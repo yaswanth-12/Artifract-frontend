@@ -4,7 +4,8 @@ import ethers,{parseEther, Contract} from "ethers";
 import {  BrowserProvider } from "ethers/providers"
 import { VAULT_ABI, VAULT_ADDRESS } from '../../constants';
 
-let account;
+let account; 
+export let signer;
 
 function WalletConnect() {
   const connectButton = useRef(null);
@@ -41,16 +42,12 @@ function WalletConnect() {
       if (typeof window.ethereum !== "undefined") {
         const provider = new BrowserProvider(ethereum);
         await provider.send("eth_requestAccounts", []);
-        let signer = await provider.getSigner();
-        
-        const contract = new Contract(VAULT_ADDRESS, VAULT_ABI, signer)
-        contr
-
-        const tx = await signer.sendTransaction({
-          from: await signer.getAddress(),
-          to: "0x92bA38bBB2B0f307b031Df22475578123c73E1F6",
-          value: parseEther("0.001")
-        }).then(result => console.log(result)).catch(err => {console.log(err)})
+        signer = await provider.getSigner();
+        // const tx = await signer.sendTransaction({
+        //   from: await signer.getAddress(),
+        //   to: "0x92bA38bBB2B0f307b031Df22475578123c73E1F6",
+        //   value: parseEther("0.001")
+        // }).then(result => console.log(result)).catch(err => {console.log(err)})
       };
 
     }
@@ -80,3 +77,4 @@ export default function Home_Navbar() {
     </>
   );
 }
+

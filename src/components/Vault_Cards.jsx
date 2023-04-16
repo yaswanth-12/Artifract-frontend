@@ -1,6 +1,19 @@
 import React from 'react'
 import styles from '../styles/vault_cards.module.css'
 
+let tokenID ;
+let no_of_fragments;
+let minimum_price;
+
+function getvalues() {
+
+    tokenID = document.getElementById('tokenID');
+    no_of_fragments = document.getElementById('fract');
+    minimum_price = document.getElementById('price');
+
+    console.log(tokenID);
+}
+
 export default function Cards() {
     return (
         <>
@@ -28,10 +41,10 @@ export default function Cards() {
                 <div className={styles.col2}>
                     <div className={styles.deposit}>
                         <form>
-                            <input type="text" placeholder="Token ID" className={styles.inputbox}></input>
-                            <input type="text" placeholder="No of fractions" className={styles.inputbox} ></input>
-                            <input type="text" placeholder="minimum price" className={styles.inputbox} ></input>
-                            <button className={styles.submitButton}>Deposit</button>
+                            <input type="text" placeholder="Token ID" className={styles.inputbox} id='tokenID' ></input>
+                            <input type="text" placeholder="No of fractions" className={styles.inputbox} id='fract'></input>
+                            <input type="text" placeholder="minimum price" className={styles.inputbox} id='price'></input>
+                            <button className={styles.submitButton} onClick={getvalues} > Deposit </button>
                         </form>
                     </div>
                 </div>
