@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import styles from '../styles/navbar.module.css';
-import  ethers from "ethers";
+import { ethers } from "ethers";
 
 let account;
 
@@ -12,7 +12,6 @@ function WalletConnect() {
     if (typeof window.ethereum !== "undefined") {
       console.log("Injected Web3 Wallet is installed!");
     }
-    console.log("checking...");
 
     //Click Event
     connectButton.current.addEventListener("click", () => {
@@ -37,10 +36,10 @@ function WalletConnect() {
         account[39] +
         account[40] +
         account[41];
-        // const provider = new ethers.providers.Web3Provider(window.ethereum);
         if (typeof window.ethereum !== "undefined") {
-          // console.log(ethers.providers.Web3Provider);
-          const provider = new ethers.providers.Web3Provider(window.ethereum)
+          const provider = new ethers.BrowserProvider(ethereum);
+          await provider.send("eth_requestAccounts", []);
+          const signer = provider.getSigner()
         };
     }
   }, [connectButton]);
