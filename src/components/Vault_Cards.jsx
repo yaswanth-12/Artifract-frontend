@@ -4,6 +4,7 @@ import { Contract } from 'ethers';
 import { VAULT_ADDRESS, VAULT_ABI } from '../../constants/index'
 import { signer } from './hNavbar';
 import { parseEther } from 'ethers/utils';
+import {BigNumber} from 'ethers';
 
 let tokenID;
 let no_of_fragments;
@@ -24,26 +25,24 @@ async function deposit(e) {
 
 function buyout(e) {
     e.preventDefault();
-    tokenID = document.getElementById('tokenID');
+    tokenID = document.getElementById('tokenID1');
 }
 
 function bidNFT(e) {
     e.preventDefault();
-    tokenID = document.getElementById('tokenID');
+    tokenID = document.getElementById('tokenID2');
 }
 
 function endBid(e) {
     e.preventDefault();
-    tokenID = document.getElementById('tokenID');
+    tokenID = document.getElementById('tokenID3');
 }
 
 async function withdraw(e) {
-    console.log(signer);
+    // console.log(signer);
     e.preventDefault();
-    tokenID = document.getElementById('tokenID');
-
+    tokenID = document.getElementById('tokenID4');
     let contract = new Contract(VAULT_ADDRESS,VAULT_ABI,signer);
-    
     let tx = await (contract.withdraw(tokenID.value));
     console.log(tx);
 
@@ -101,7 +100,7 @@ export default function Cards() {
                 </div>
                 <div className={styles.col22}>
                     <div className={styles.initiate_buyout}>
-                        <input type="text" placeholder="TokenID" className={styles.inputbox} id='tokenID'></input>
+                        <input type="text" placeholder="TokenID" className={styles.inputbox} id='tokenID1'></input>
                         <button type='submit' className={styles.submitButton} onClick={buyout} >BuyOut</button>
                     </div>
                 </div>
@@ -120,7 +119,7 @@ export default function Cards() {
                 </div>
                 <div className={styles.col22}>
                     <div className={styles.end_bid}>
-                        <input type="text" placeholder="tokenID" className={styles.inputbox} id='tokenID' ></input>
+                        <input type="text" placeholder="tokenID" className={styles.inputbox} id='tokenID2' ></input>
                         <button type='submit' className={styles.submitButton} onClick={bidNFT}>Bid on NFT </button>
                     </div>
                 </div>
@@ -139,7 +138,7 @@ export default function Cards() {
                 </div>
                 <div className={styles.col22}>
                     <div className={styles.bid_onNFT}>
-                        <input type="text" placeholder="tokenID" className={styles.inputbox} id='tokenID' ></input>
+                        <input type="text" placeholder="tokenID" className={styles.inputbox} id='tokenID3' ></input>
                         <button type='submit' className={styles.submitButton} onClick={endBid}>End Bid</button>
                     </div>
                 </div>
@@ -158,7 +157,7 @@ export default function Cards() {
                 </div>
                 <div className={styles.col22}>
                     <div className={styles.withdraw}>
-                        <input type="text" placeholder="tokenID" className={styles.inputbox} id='tokenID' ></input>
+                        <input type="text" placeholder="tokenID" className={styles.inputbox} id='tokenID4' ></input>
                         <button type='submit' className={styles.submitButton} onClick={withdraw}> Withdraw </button>
                     </div>
                 </div>
