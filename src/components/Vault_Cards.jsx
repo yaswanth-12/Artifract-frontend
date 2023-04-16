@@ -1,18 +1,44 @@
 import React from 'react'
 import styles from '../styles/vault_cards.module.css'
+import { Contract } from 'ethers';
+import { VAULT_ADDRESS, VAULT_ABI } from '../../constants/index'
+import signer from './hNavbar';
 
-let tokenID ;
+let tokenID;
 let no_of_fragments;
 let minimum_price;
 
-function getvalues() {
+let contract = new Contract(VAULT_ADDRESS, VAULT_ABI, signer)
 
-    tokenID = document.getElementById('tokenID');
-    no_of_fragments = document.getElementById('fract');
-    minimum_price = document.getElementById('price');
-
+function deposit(e) {
+    e.preventDefault();
+    tokenID = document.getElementById('tokenID').value;
+    no_of_fragments = document.getElementById('fract').value;
+    minimum_price = document.getElementById('price').value;
     console.log(tokenID);
 }
+
+function buyout(e) {
+    e.preventDefault();
+    tokenID = document.getElementById('tokenID');
+}
+
+function bidNFT(e) {
+    e.preventDefault();
+    tokenID = document.getElementById('tokenID');
+}
+
+function endBid(e) {
+    e.preventDefault();
+    tokenID = document.getElementById('tokenID');
+}
+
+function withdraw(e) {
+    e.preventDefault();
+    tokenID = document.getElementById('tokenID');
+}
+
+
 
 export default function Cards() {
     return (
@@ -44,7 +70,7 @@ export default function Cards() {
                             <input type="text" placeholder="Token ID" className={styles.inputbox} id='tokenID' ></input>
                             <input type="text" placeholder="No of fractions" className={styles.inputbox} id='fract'></input>
                             <input type="text" placeholder="minimum price" className={styles.inputbox} id='price'></input>
-                            <button className={styles.submitButton} onClick={getvalues} > Deposit </button>
+                            <button type='submit' className={styles.submitButton} onClick={deposit} > Deposit </button>
                         </form>
                     </div>
                 </div>
@@ -64,8 +90,8 @@ export default function Cards() {
                 </div>
                 <div className={styles.col22}>
                     <div className={styles.initiate_buyout}>
-                        <input type="text" placeholder="TokenID" className={styles.inputbox} ></input>
-                        <button className={styles.submitButton}>BuyOut</button>
+                        <input type="text" placeholder="TokenID" className={styles.inputbox} id='tokenID'></input>
+                        <button type='submit' className={styles.submitButton} onClick={buyout} >BuyOut</button>
                     </div>
                 </div>
             </div>
@@ -83,8 +109,8 @@ export default function Cards() {
                 </div>
                 <div className={styles.col22}>
                     <div className={styles.end_bid}>
-                        <input type="text" placeholder="tokenID" className={styles.inputbox} ></input>
-                        <button className={styles.submitButton}>Bid on NFT </button>
+                        <input type="text" placeholder="tokenID" className={styles.inputbox} id='tokenID' ></input>
+                        <button type='submit' className={styles.submitButton} onClick={bidNFT}>Bid on NFT </button>
                     </div>
                 </div>
             </div>
@@ -102,8 +128,8 @@ export default function Cards() {
                 </div>
                 <div className={styles.col22}>
                     <div className={styles.bid_onNFT}>
-                        <input type="text" placeholder="tokenID" className={styles.inputbox} ></input>
-                        <button className={styles.submitButton}>End Bid</button>
+                        <input type="text" placeholder="tokenID" className={styles.inputbox} id='tokenID' ></input>
+                        <button type='submit' className={styles.submitButton} onClick={endBid}>End Bid</button>
                     </div>
                 </div>
             </div>
@@ -121,8 +147,8 @@ export default function Cards() {
                 </div>
                 <div className={styles.col22}>
                     <div className={styles.withdraw}>
-                        <input type="text" placeholder="tokenID" className={styles.inputbox} ></input>
-                        <button className={styles.submitButton}> Withdraw </button>
+                        <input type="text" placeholder="tokenID" className={styles.inputbox} id='tokenID' ></input>
+                        <button type='submit' className={styles.submitButton} onClick={withdraw}> Withdraw </button>
                     </div>
                 </div>
             </div>
