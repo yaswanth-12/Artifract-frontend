@@ -12,10 +12,10 @@ let contract = new Contract(VAULT_ADDRESS, VAULT_ABI, signer)
 
 function deposit(e) {
     e.preventDefault();
-    tokenID = document.getElementById('tokenID').value;
-    no_of_fragments = document.getElementById('fract').value;
-    minimum_price = document.getElementById('price').value;
-    console.log(tokenID);
+    tokenID = document.getElementById('tokenID');
+    no_of_fragments = document.getElementById('fract');
+    minimum_price = document.getElementById('price');
+    // console.log(tokenID.value);
 }
 
 function buyout(e) {
