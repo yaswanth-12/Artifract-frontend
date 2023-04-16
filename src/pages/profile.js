@@ -9,6 +9,8 @@ import styles from '../styles/bg.module.css'
 export default function ProfilePage() {
   return (
     <>
+    <link rel="icon" type="image/x-icon" href="https://yaswanth-12.github.io/Artifract-frontend/Artifract_Fevicon.png"></link>
+      <div className={styles.body}></div>
       <div className={styles.body}>
         <Profile_Navbar />
         <Main />
