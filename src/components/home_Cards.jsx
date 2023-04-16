@@ -9,7 +9,7 @@ export default function Cards() {
             <div className={styles.alignment}>
                 {card("https://yaswanth-12.github.io/Artifract-frontend/1.avif", "#Karma Vault")}
                 {card("https://yaswanth-12.github.io/Artifract-frontend/BAYC_Collections.png", "#BAYC Vault")}
-                {card("https://yaswanth-12.github.io/Artifract-frontend/Goons_Collections.png", "#Azuki Vault")}
+                {card("https://yaswanth-12.github.io/Artifract-frontend/Goons_Collections.png", "#Goons Vault")}
             </div>
         </>
     )
